@@ -1,18 +1,28 @@
 import React from 'react';
 import './SearchBar.css'
 
+
+
 class SearchBar extends React.Component {
 	state = {term: ''};
 
+// important: An arrow function is necessary here because
+//  this.state.term is not bound to SearchBar 'this' within
+//  onFormSubmit when onFormSubmit is a normal function
+	// note: The arrow function will always ensure the value 'this'
+	//  is always equal to instance of the SearchBar class
+	onFormSubmit = (event) => {
+		event.preventDefault();
+
+		console.log(this.state.term);
+	}
 
 	// todo: this method is called anytime there is an input change
 	/*onInputChange(event) {
 	 console.log(event.target.value);
 	 }*/
 
-	onFormSubmit(event) {
-		event.preventDefault();
-	}
+
 
 	render() {
 		return (
