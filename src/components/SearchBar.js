@@ -2,11 +2,13 @@ import React from 'react';
 import './SearchBar.css'
 
 class SearchBar extends React.Component {
+	state = {term: ''};
+
 
 	// todo: this method is called anytime there is an input change
-	onInputChange(event) {
-		console.log(event.target.value);
-	}
+	/*onInputChange(event) {
+	 console.log(event.target.value);
+	 }*/
 
 	render() {
 		return (
@@ -17,7 +19,8 @@ class SearchBar extends React.Component {
 						<input type="text"
 						       name="search-bar"
 						       id="search-bar"
-									 onChange={this.onInputChange}/>
+						       value={this.state.term}
+						       onChange={(e) => this.setState({term: e.target.value})}/>
 					</div>
 					{/* /.field */}
 				</form>
