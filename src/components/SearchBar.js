@@ -3,8 +3,8 @@ import React from 'react';
 class SearchBar extends React.Component {
 
 	// todo: this method is called anytime there is an input change
-	onInputChange() {
-		console.log('Input change detected');
+	onInputChange(event) {
+		console.log(event.target.value);
 	}
 
 	render() {
