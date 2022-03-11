@@ -3,11 +3,15 @@ import React from 'react';
 class SearchBar extends React.Component {
 	render() {
 		return (
-			<div>
-				<form>
-					<input type="text"
-					       name=""
-					       id=""/>
+			<div className="ui segment">
+				<form className="ui form">
+					<div className="field">
+						<label htmlFor="search-bar">Image Search</label>
+						<input type="text"
+						       name="search-bar"
+						       id="search-bar"/>
+					</div>
+					{/* /.field */}
 				</form>
 			</div>
 		)
