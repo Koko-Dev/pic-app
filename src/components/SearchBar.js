@@ -2,7 +2,15 @@ import React from 'react';
 
 class SearchBar extends React.Component {
 	render() {
-		return <div><h1>Hello from  SearchBar</h1> </div>
+		return (
+			<div>
+				<form>
+					<input type="text"
+					       name=""
+					       id=""/>
+				</form>
+			</div>
+		)
 	}
 }
 
