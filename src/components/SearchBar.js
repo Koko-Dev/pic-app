@@ -11,12 +11,12 @@ class SearchBar extends React.Component {
 //  SearchBar 'this' when just using function method.
 	// note: The arrow function will always ensure the value 'this'
 	//  is always equal to instance of the SearchBar class.
-	onFormSubmit = (event) => {
+	/*onFormSubmit = (event) => {
 
 		event.preventDefault();
 		console.log(this.state.term);
 	}
-
+*/
 
 
 	// todo: this method is called anytime there is an input change
@@ -24,13 +24,18 @@ class SearchBar extends React.Component {
 	 console.log(event.target.value);
 	 }*/
 
+	onFormSubmit(event) {
+		event.preventDefault();
+		console.log(this.state.term);
+	}
+
 
 
 	render() {
 		return (
 			<div className="ui segment">
 				<form className="ui form"
-							onSubmit={this.onFormSubmit}>
+							onSubmit={(event) => this.onFormSubmit(event)}>
 					<div className="field">
 						<label htmlFor="search-bar">Image Search</label>
 						<input type="text"
