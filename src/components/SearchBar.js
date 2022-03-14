@@ -14,7 +14,6 @@ class SearchBar extends React.Component {
 	// note: The arrow function will always ensure the value 'this'
 	//  is always equal to instance of the SearchBar class.
 	onFormSubmit = (event) => {
-
 		event.preventDefault();
 
 		// Note: To get access to the <App /> prop onFormSubmit when
