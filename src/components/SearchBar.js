@@ -2,7 +2,10 @@ import React from 'react';
 import './SearchBar.css'
 
 class SearchBar extends React.Component {
-	state = {term: ''};
+	constructor(props) {
+		super(props);
+		this.state = {term: ''};
+	}
 
 // important: An arrow function is necessary here because
 //  this.state.term within onFormSubmit is not bound to
@@ -12,7 +15,10 @@ class SearchBar extends React.Component {
 	onFormSubmit = (event) => {
 
 		event.preventDefault();
-		console.log(this.state.term);
+
+		// Note: To get access to the <App /> prop onFormSubmit when
+		//  <SearchBar /> is called, use this.props
+		this.props.onFormSubmit(this.state.term);
 	}
 
 
