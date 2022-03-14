@@ -2,10 +2,11 @@ import React from 'react';
 import './SearchBar.css'
 
 class SearchBar extends React.Component {
-	constructor(props) {
+	/*constructor(props) {
 		super(props);
 		this.state = {term: ''};
-	}
+	}*/
+	state = {term: ''};
 
 // important: An arrow function is necessary here because
 //  this.state.term within onFormSubmit is not bound to
