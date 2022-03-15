@@ -2,10 +2,6 @@ import React from 'react';
 import './SearchBar.css'
 
 class SearchBar extends React.Component {
-	/*constructor(props) {
-		super(props);
-		this.state = {term: ''};
-	}*/
 	state = {term: ''};
 
 // important: An arrow function is necessary here because
@@ -18,7 +14,7 @@ class SearchBar extends React.Component {
 
 		// Note: To get access to the <App /> prop onFormSubmit when
 		//  <SearchBar /> is called, use this.props
-		this.props.onFormSubmit(this.state.term);
+		this.props.onSubmit(this.state.term);
 	}
 
 
