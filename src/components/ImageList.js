@@ -1,13 +1,14 @@
 import React from 'react';
 
 const ImageList = (props) => {
+	console.log(props.images);
 	// todo: create an array of all image urls
-	const images = props.images.map(image => {
-		return <img src={image.urls.regular} />
+	const searchImages = props.images.map(image => {
+		return <img src={image.urls.small} />
 	})
 
 	return (
-		<div>{images}</div>
+		<div>{searchImages}</div>
 	)
 }
 
