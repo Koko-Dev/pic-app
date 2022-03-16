@@ -21,7 +21,7 @@ onSearchSubmit = async (term) => {
 				<SearchBar onSubmit={this.onSearchSubmit} />
 
 			{/*	todo: print out number of images*/}
-				<ImageList />
+				<ImageList images={this.state.images}/>
 			</div>)
 	}
 }
