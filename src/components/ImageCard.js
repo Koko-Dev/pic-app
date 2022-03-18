@@ -3,6 +3,7 @@ import React from 'react';
 class ImageCard extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = { spans: 0 };
 		this.imageRef = React.createRef();
 	}
 
@@ -21,14 +22,24 @@ class ImageCard extends React.Component {
 	}
 
 	setSpans = () => {
-		console.log(this.imageRef.current.clientHeight);
+		const height = this.imageRef.current.clientHeight;
+
+		// todo: set spans = height of each row / 150px set height plus 1
+		// note: we add 1 to encompass rounding
+		// note: Add Math.ceil() just to cap its value
+		const spans = Math.ceil(height / 150 + 1);
+
+		// todo: set spans on state
+		// this.setState({ spans: spans });
+		this.setState({ spans });
+
+		console.log(spans);
 	}
 
 	render() {
-
 		const {description, urls} = this.props.image;
 		return (
-			<div>
+			<div style={{ gridRowEnd: `span ${this.state.spans}`}}>
 				<img
 					ref={this.imageRef}
 					alt={description}
