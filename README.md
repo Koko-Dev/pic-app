@@ -1,6 +1,6 @@
 # Pic-App
 
-This is a react app which will display a series of images based on your search.
+This is a react app which will display a series of images based on your search. The Pic-App is very responsive, yet simple employing a dynamic grid system based on the client height of each image.
 
 ## Available Scripts
 
