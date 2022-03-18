@@ -5,6 +5,15 @@ class ImageCard extends React.Component {
 		super(props);
 		this.imageRef = React.createRef();
 	}
+
+	// note: To access the <img /> through the <img ref={this.imageRef},
+	//  we call on componentDidMount() which is only called after
+	//  the component is rendered.
+	//  goal: The goal is to reach into the DOM and figure out the height of the image
+	componentDidMount() {
+		console.log(this.imageRef);
+	}
+
 	render() {
 
 		const {description, urls} = this.props.image;
