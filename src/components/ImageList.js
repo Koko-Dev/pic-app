@@ -1,4 +1,5 @@
 import React from 'react';
+import './ImageList.css';
 
 const ImageList = (props) => {
 	// todo: create an array of all image urls
@@ -8,7 +9,7 @@ const ImageList = (props) => {
 	})
 
 	return (
-		<div>{searchImages}</div>
+		<div className="image-list">{searchImages}</div>
 	)
 }
 
