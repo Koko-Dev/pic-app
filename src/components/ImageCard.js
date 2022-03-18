@@ -27,7 +27,7 @@ class ImageCard extends React.Component {
 		// todo: set spans = height of each row / 150px set height plus 1
 		// note: we add 1 to encompass rounding
 		// note: Add Math.ceil() just to cap its value
-		const spans = Math.ceil(height / 150 + 1);
+		const spans = Math.ceil(height / 10 + 1);
 
 		// todo: set spans on state
 		// this.setState({ spans: spans });
