@@ -6,12 +6,19 @@ class ImageCard extends React.Component {
 		this.imageRef = React.createRef();
 	}
 
-	// note: To access the <img /> through the <img ref={this.imageRef},
-	//  we call on componentDidMount() which is only called after
-	//  the component is rendered.
-	//  goal: The goal is to reach into the DOM and figure out the height of the image
+	/*
+	 note: To access the <img /> through the <img ref={this.imageRef},
+		 we call on componentDidMount() which is only called after
+		 the component is rendered.
+	 goal: The goal is to reach into the DOM and figure out the
+	   clientHeight of the image.
+	 important: When componentDidMount() is called,
+		 although <img /> has been rendered, the actual
+		 image has not yet been downloaded, so we cannot
+		 call for clientHeight here; it will be zero at this point. */
 	componentDidMount() {
 		console.log(this.imageRef);
+		console.log(this.imageRef.current.clientHeight);
 	}
 
 	render() {
